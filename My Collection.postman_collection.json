@@ -1,0 +1,2411 @@
+{
+	"info": {
+		"_postman_id": "9680bf81-b4ae-402f-98c4-7d35d64d9e61",
+		"name": "My Collection",
+		"description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47291808",
+		"_collection_link": "https://htavian110-1887493.postman.co/workspace/Wasim's-Workspace~56293fe9-2fbf-4c81-855e-75f2d9109913/collection/47291808-9680bf81-b4ae-402f-98c4-7d35d64d9e61?action=share&source=collection_link&creator=47291808"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "register",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "ar",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Hasan Ibrahim\",\n  \"email\": \"htavian110@gmail.com\",\n  \"password\": \"Password123!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}auth/register",
+							"host": [
+								"{{url}}auth"
+							],
+							"path": [
+								"register"
+							]
+						},
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "resend-verification",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "ar",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"htavian110@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}auth/resend-verification",
+							"host": [
+								"{{url}}auth"
+							],
+							"path": [
+								"resend-verification"
+							]
+						},
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "verify-email",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "ar",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"htavian110@gmail.com\",\n  \"otp\": \"144028\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}auth/verify-email",
+							"host": [
+								"{{url}}auth"
+							],
+							"path": [
+								"verify-email"
+							]
+						},
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "ar",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"htavian110@gmail.com\",\n  \"password\": \"Password123!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}auth/login",
+							"host": [
+								"{{url}}auth"
+							],
+							"path": [
+								"login"
+							]
+						},
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{user_access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "ar",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{url}}auth/logout",
+							"host": [
+								"{{url}}auth"
+							],
+							"path": [
+								"logout"
+							]
+						},
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "forgot-password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "ar",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"htavian110@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}auth/forgot-password",
+							"host": [
+								"{{url}}auth"
+							],
+							"path": [
+								"forgot-password"
+							]
+						},
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "reset-password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "ar",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"htavian110@gmail.com\",\n  \"otp\": \"121015\",\n  \"newPassword\": \"NewPassword1234!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}auth/reset-password",
+							"host": [
+								"{{url}}auth"
+							],
+							"path": [
+								"reset-password"
+							]
+						},
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "change-password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{user_access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "ar",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"currentPassword\": \"Password123!\",\n  \"newPassword\": \"NewPassword456!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}auth/change-password",
+							"host": [
+								"{{url}}auth"
+							],
+							"path": [
+								"change-password"
+							]
+						},
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "set profile",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{user_access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "ar",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Hassan Ibrahim\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}auth/profile",
+							"host": [
+								"{{url}}auth"
+							],
+							"path": [
+								"profile"
+							]
+						},
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "get profile",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{user_access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}auth/profile",
+							"host": [
+								"{{url}}auth"
+							],
+							"path": [
+								"profile"
+							]
+						},
+						"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "admin",
+					"item": [
+						{
+							"name": "set user role",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{user_access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "ar",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"role\": \"admin\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}users/:id/role",
+									"host": [
+										"{{url}}users"
+									],
+									"path": [
+										":id",
+										"role"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								},
+								"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+							},
+							"response": []
+						},
+						{
+							"name": "set user status",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{user_access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "ar",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"isActive\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}users/:id/status",
+									"host": [
+										"{{url}}users"
+									],
+									"path": [
+										":id",
+										"status"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								},
+								"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+							},
+							"response": []
+						},
+						{
+							"name": "soft delete user",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{user_access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "ar",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{url}}users/:id",
+									"host": [
+										"{{url}}users"
+									],
+									"path": [
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								},
+								"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+							},
+							"response": []
+						},
+						{
+							"name": "get users statistics",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{user_access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "ar",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{url}}users/statistics",
+									"host": [
+										"{{url}}users"
+									],
+									"path": [
+										"statistics"
+									]
+								},
+								"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "get all users",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{user_access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "ar",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{url}}users?page=1&limit=5",
+							"host": [
+								"{{url}}users"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								},
+								{
+									"key": "search",
+									"value": "userName or email",
+									"disabled": true
+								},
+								{
+									"key": "role",
+									"value": "(user/admin)",
+									"disabled": true
+								},
+								{
+									"key": "isActive",
+									"value": "(true/false)",
+									"disabled": true
+								},
+								{
+									"key": "sortBy",
+									"value": "(name, email, createdAt, role)",
+									"disabled": true
+								},
+								{
+									"key": "sortOrder",
+									"value": "(asc/desc)",
+									"disabled": true
+								}
+							]
+						},
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "get user by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{user_access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "ar",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{url}}users/:id",
+							"host": [
+								"{{url}}users"
+							],
+							"path": [
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						},
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "category",
+					"item": [
+						{
+							"name": "admin",
+							"item": [
+								{
+									"name": "add category",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{user_access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "ar",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "// {\r\n//   \"name\": \"Electronics\",\r\n//   \"nameAr\": \"إلكترونيات\",\r\n//   \"description\": \"Electronic devices and gadgets\",\r\n//   \"descriptionAr\": \"الأجهزة الإلكترونية والأدوات\",\r\n//   \"sortOrder\": 1\r\n// }\r\n//   {\r\n//     \"name\": \"Clothing\",\r\n//     \"nameAr\": \"ملابس\",\r\n//     \"description\": \"Fashion apparel for all ages\",\r\n//     \"descriptionAr\": \"ملابس عصرية لجميع الأعمار\",\r\n//     \"sortOrder\": 2\r\n//   }\r\n//   {\r\n//     \"name\": \"Home & Kitchen\",\r\n//     \"nameAr\": \"منزل ومطبخ\",\r\n//     \"description\": \"Household essentials and cooking tools\",\r\n//     \"descriptionAr\": \"أساسيات المنزل وأدوات الطهي\",\r\n//     \"sortOrder\": 3\r\n//   }\r\n//   {\r\n//     \"name\": \"Books\",\r\n//     \"nameAr\": \"كتب\",\r\n//     \"description\": \"Educational and entertainment books\",\r\n//     \"descriptionAr\": \"كتب تعليمية وترفيهية\",\r\n//     \"sortOrder\": 4\r\n//   }\r\n//   {\r\n//     \"name\": \"Sports\",\r\n//     \"nameAr\": \"رياضة\",\r\n//     \"description\": \"Fitness equipment and sportswear\",\r\n//     \"descriptionAr\": \"معدات اللياقة والملابس الرياضية\",\r\n//     \"sortOrder\": 5\r\n//   }\r\n//   {\r\n//     \"name\": \"Beauty\",\r\n//     \"nameAr\": \"جمال\",\r\n//     \"description\": \"Cosmetics and personal care products\",\r\n//     \"descriptionAr\": \"مستحضرات تجميل وعناية شخصية\",\r\n//     \"sortOrder\": 6\r\n//   }\r\n//   {\r\n//     \"name\": \"Toys\",\r\n//     \"nameAr\": \"ألعاب\",\r\n//     \"description\": \"Educational and entertainment toys for kids\",\r\n//     \"descriptionAr\": \"ألعاب تعليمية وترفيهية للأطفال\",\r\n//     \"sortOrder\": 7\r\n//   }\r\n//   {\r\n//     \"name\": \"Furniture\",\r\n//     \"nameAr\": \"أثاث\",\r\n//     \"description\": \"Home and office furniture collections\",\r\n//     \"descriptionAr\": \"تشكيلات أثاث للمنزل والمكتب\",\r\n//     \"sortOrder\": 8\r\n//   }\r\n//   {\r\n//     \"name\": \"Automotive\",\r\n//     \"nameAr\": \"سيارات\",\r\n//     \"description\": \"Car accessories and maintenance tools\",\r\n//     \"descriptionAr\": \"إكسسوارات السيارات وأدوات الصيانة\",\r\n//     \"sortOrder\": 9\r\n//   }\r\n//   {\r\n//     \"name\": \"Health\",\r\n//     \"nameAr\": \"صحة\",\r\n//     \"description\": \"Medical supplies and wellness products\",\r\n//     \"descriptionAr\": \"مستلزمات طبية ومنتجات العناية الصحية\",\r\n//     \"sortOrder\": 10\r\n//   }\r\n//   {\r\n//     \"name\": \"Beverages\",\r\n//     \"nameAr\": \"مشروبات\",\r\n//     \"description\": \"Cold and hot drinks for daily consumption\",\r\n//     \"descriptionAr\": \"مشروبات باردة وساخنة للاستهلاك اليومي\",\r\n//     \"sortOrder\": 11\r\n//   }\r\n//   {\r\n//     \"name\": \"Dairy Products\",\r\n//     \"nameAr\": \"منتجات ألبان\",\r\n//     \"description\": \"Milk derivatives and cheese varieties\",\r\n//     \"descriptionAr\": \"مشتقات الحليب وأصناف الجبن\",\r\n//     \"sortOrder\": 12\r\n//   }\r\n//   {\r\n//     \"name\": \"Bakery\",\r\n//     \"nameAr\": \"مخبوزات\",\r\n//     \"description\": \"Fresh bread and pastry items\",\r\n//     \"descriptionAr\": \"خبز طازج ومعجنات\",\r\n//     \"sortOrder\": 13\r\n//   }\r\n//   {\r\n//     \"name\": \"Spices & Condiments\",\r\n//     \"nameAr\": \"بهارات وتوابل\",\r\n//     \"description\": \"Flavor enhancers for various cuisines\",\r\n//     \"descriptionAr\": \"محسنات نكهة للمأكولات المتنوعة\",\r\n//     \"sortOrder\": 14\r\n//   }\r\n//  {\r\n//     \"name\": \"Baby Food\",\r\n//     \"nameAr\": \"أغذية أطفال\",\r\n//     \"description\": \"Nutritional products for infants\",\r\n//     \"descriptionAr\": \"منتجات غذائية للرضع\",\r\n//     \"sortOrder\": 15\r\n//   }\r\n// {\r\n//   \"name\": \"Canned Foods\",\r\n//   \"nameAr\": \"أغذية معلبة\",\r\n//   \"slug\": \"canned-foods\",\r\n//   \"description\": \"Various preserved foods in sealed containers for long shelf life\",\r\n//   \"descriptionAr\": \"مختلف الأغذية المحفوظة في عبوات محكمة الإغلاق لفترة صلاحية طويلة\",\r\n//   \"sortOrder\": 16\r\n// }",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}categories",
+											"host": [
+												"{{url}}categories"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "edit category",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{user_access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "ar",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"Updated Electronics\",\r\n  \"nameAr\": \"إلكترونيات محدثة\",\r\n  \"description\": \"Updated description\",\r\n  \"descriptionAr\": \"وصف محدث\",\r\n  \"sortOrder\": 2,\r\n  \"isActive\": true\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}categories/:id",
+											"host": [
+												"{{url}}categories"
+											],
+											"path": [
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "68905876390051ae4afbf7a7"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "delete category",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{user_access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{url}}categories/:id",
+											"host": [
+												"{{url}}categories"
+											],
+											"path": [
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "68905876390051ae4afbf7a7"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "restore deleted category",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{user_access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "ar",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{url}}categories/:id/restore",
+											"host": [
+												"{{url}}categories"
+											],
+											"path": [
+												":id",
+												"restore"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "68905876390051ae4afbf7a7"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update category sort-order",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{user_access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "ar",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"categories\": [\r\n    {\r\n      \"id\": \"68905876390051ae4afbf7a7\",\r\n      \"sortOrder\": 1\r\n    }\r\n    // {\r\n    //   \"id\": \"64a1b2c3d4e5f6789012346\",\r\n    //   \"sortOrder\": 2\r\n    // }\r\n  ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}categories/admin/sort-order",
+											"host": [
+												"{{url}}categories"
+											],
+											"path": [
+												"admin",
+												"sort-order"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get categories statistics",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{user_access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "ar",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{url}}categories/admin/statistics",
+											"host": [
+												"{{url}}categories"
+											],
+											"path": [
+												"admin",
+												"statistics"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get all categories",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{user_access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "ar",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{url}}categories",
+											"host": [
+												"{{url}}categories"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get category by id",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{user_access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "ar",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{url}}categories",
+											"host": [
+												"{{url}}categories"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "public",
+							"item": [
+								{
+									"name": "get all categories",
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "en",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{url}}categories/public?page=1&limit=10",
+											"host": [
+												"{{url}}categories"
+											],
+											"path": [
+												"public"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												},
+												{
+													"key": "search",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "sortBy",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "sortOrder",
+													"value": "(asc/desc)",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get category by id",
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "ar",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{url}}categories/public/:id",
+											"host": [
+												"{{url}}categories"
+											],
+											"path": [
+												"public",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "68907b89303834c16a1e4ee3"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get categories with product statistics",
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "en",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{url}}categories/public?page=1&limit=10",
+											"host": [
+												"{{url}}categories"
+											],
+											"path": [
+												"public"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												},
+												{
+													"key": "search",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "sortBy",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "sortOrder",
+													"value": "(asc/desc)",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "products",
+					"item": [
+						{
+							"name": "admin",
+							"item": [
+								{
+									"name": "add product",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{user_access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "ar",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "// {\r\n//   \"name\": \"Gaming Laptop\",\r\n//   \"nameAr\": \"لابتوب العاب\",\r\n//   \"description\": \"High-performance gaming laptop with RTX graphics\",\r\n//   \"descriptionAr\": \"لابتوب ألعاب عالي الأداء مزود بكرت شاشة RTX\",\r\n//   \"price\": 1299.99,\r\n//   \"stock\": 50,\r\n//   \"category\": \"68907b89303834c16a1e4ee3\"\r\n// //   \"sku\": \"GAMING-LAPTOP-001\"\r\n// }\r\n{\r\n  \"name\": \"Premium Canned Tuna\",\r\n  \"nameAr\": \"تونة معلبة فاخرة\",\r\n  \"slug\": \"premium-canned-tuna\",\r\n  \"description\": \"High-quality tuna in olive oil, rich in omega-3\",\r\n  \"descriptionAr\": \"تونة عالية الجودة معبأة بزيت الزيتون، غنية بأوميغا-3\",\r\n  \"price\": 3.99,\r\n  \"stock\": 200,\r\n  \"category\": \"68907c7e303834c16a1e4f49\",\r\n  \"sku\": \"TUNA-PREM-001\",\r\n  \"unitWeight\": 100,\r\n  \"brand\": \"SeaDelight\",\r\n  \"brandAr\": \"البحر\",\r\n  \"productionDate\": \"2024-01-15T00:00:00.000Z\", // اختياري - تاريخ الإنتاج\r\n  \"expiryDate\": \"2025-01-15T00:00:00.000Z\" // اختياري - تاريخ انتهاء الصلاحية\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}products",
+											"host": [
+												"{{url}}products"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update product",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{user_access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "ar",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "// {\r\n//   \"name\": \"Gaming Laptop\",\r\n//   \"nameAr\": \"لابتوب العاب\",\r\n//   \"description\": \"High-performance gaming laptop with RTX graphics\",\r\n//   \"descriptionAr\": \"لابتوب ألعاب عالي الأداء مزود بكرت شاشة RTX\",\r\n//   \"price\": 1299.99,\r\n//   \"stock\": 50,\r\n//   \"category\": \"68907b89303834c16a1e4ee3\"\r\n// //   \"sku\": \"GAMING-LAPTOP-001\"\r\n// }\r\n{\r\n  \"name\": \"Premium Canned Tuna\",\r\n  \"nameAr\": \"تونة معلبة فاخرة\",\r\n  \"slug\": \"premium-canned-tuna\",\r\n  \"description\": \"High-quality tuna in olive oil, rich in omega-3\",\r\n  \"descriptionAr\": \"تونة عالية الجودة معبأة بزيت الزيتون، غنية بأوميغا-3\",\r\n  \"price\": 3.99,\r\n  \"stock\": 200,\r\n  \"category\": \"68907c7e303834c16a1e4f49\",\r\n  \"sku\": \"TUNA-PREM-001\",\r\n  \"unitWeight\": 100,\r\n  \"brand\": \"SeaDelight\",\r\n  \"brandAr\": \"النهر\",\r\n  \"productionDate\": \"2024-01-15T00:00:00.000Z\", // اختياري - تاريخ الإنتاج\r\n  \"expiryDate\": \"2025-01-15T00:00:00.000Z\" // اختياري - تاريخ انتهاء الصلاحية\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}products/:id",
+											"host": [
+												"{{url}}products"
+											],
+											"path": [
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "68908f36d82f45dfe1cea35a"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update product stock",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{user_access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "ar",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"stock\": 100,\r\n  \"operation\": \"set\"  //\"add\" or \"set\" or \"subtract\" \r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}products/:id/stock",
+											"host": [
+												"{{url}}products"
+											],
+											"path": [
+												":id",
+												"stock"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "68908f36d82f45dfe1cea35a"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "restore deleted Product",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{user_access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "ar",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{url}}products/:id/restore",
+											"host": [
+												"{{url}}products"
+											],
+											"path": [
+												":id",
+												"restore"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "68908f36d82f45dfe1cea35a"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "soft delete product",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{user_access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "ar",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{url}}products/:id",
+											"host": [
+												"{{url}}products"
+											],
+											"path": [
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "68908f36d82f45dfe1cea35a"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get all products for admin",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{user_access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "ar",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{url}}products?page=1&limit=5",
+											"host": [
+												"{{url}}products"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "limit",
+													"value": "5"
+												},
+												{
+													"key": "category",
+													"value": "68907c7e303834c16a1e4f49",
+													"disabled": true
+												},
+												{
+													"key": "minPrice",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "maxPrice",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "search",
+													"value": "Tuna",
+													"disabled": true
+												},
+												{
+													"key": "sortBy",
+													"value": "(name, price, createdAt)",
+													"disabled": true
+												},
+												{
+													"key": "sortOrder",
+													"value": "(asc, desc)",
+													"disabled": true
+												},
+												{
+													"key": "inStock",
+													"value": "(true/false)",
+													"disabled": true
+												},
+												{
+													"key": "brand",
+													"value": "SeaDelight",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get products stats",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{user_access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "ar",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{url}}products/admin/stats",
+											"host": [
+												"{{url}}products"
+											],
+											"path": [
+												"admin",
+												"stats"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get expired product",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{user_access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "en",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{url}}products/admin/expired?page=1&limit=5",
+											"host": [
+												"{{url}}products"
+											],
+											"path": [
+												"admin",
+												"expired"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "limit",
+													"value": "5"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get near-expiry product",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{user_access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "en",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{url}}products/admin/near-expiry?days=30",
+											"host": [
+												"{{url}}products"
+											],
+											"path": [
+												"admin",
+												"near-expiry"
+											],
+											"query": [
+												{
+													"key": "days",
+													"value": "30"
+												},
+												{
+													"key": "page",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "limit",
+													"value": "5",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get date-range product",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{user_access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "en",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{url}}products/admin/date-range",
+											"host": [
+												"{{url}}products"
+											],
+											"path": [
+												"admin",
+												"date-range"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "limit",
+													"value": "5",
+													"disabled": true
+												},
+												{
+													"key": "dateField",
+													"value": "(productionDate/expiryDate/createdAt/updatedAt)",
+													"disabled": true
+												},
+												{
+													"key": "startDate",
+													"value": "(ISO format)",
+													"disabled": true
+												},
+												{
+													"key": "endDate",
+													"value": "(ISO format)",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "public",
+							"item": [
+								{
+									"name": "get all active products",
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "ar",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{url}}products?page=1&limit=5",
+											"host": [
+												"{{url}}products"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "limit",
+													"value": "5"
+												},
+												{
+													"key": "category",
+													"value": "68907c7e303834c16a1e4f49",
+													"disabled": true
+												},
+												{
+													"key": "minPrice",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "maxPrice",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "search",
+													"value": "Tuna",
+													"disabled": true
+												},
+												{
+													"key": "sortBy",
+													"value": "(name, price, createdAt)",
+													"disabled": true
+												},
+												{
+													"key": "sortOrder",
+													"value": "(asc, desc)",
+													"disabled": true
+												},
+												{
+													"key": "inStock",
+													"value": "(true/false)",
+													"disabled": true
+												},
+												{
+													"key": "brand",
+													"value": "SeaDelight",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get all products by categories",
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "ar",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{url}}products/category/:categoryId",
+											"host": [
+												"{{url}}products"
+											],
+											"path": [
+												"category",
+												":categoryId"
+											],
+											"variable": [
+												{
+													"key": "categoryId",
+													"value": "68907c7e303834c16a1e4f49"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get product by id",
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "en",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{url}}products/:id",
+											"host": [
+												"{{url}}products"
+											],
+											"path": [
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "68907cd7303834c16a1e4f53"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get all products categories",
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "ar",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{url}}products/categories",
+											"host": [
+												"{{url}}products"
+											],
+											"path": [
+												"categories"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "admin",
+					"item": [
+						{
+							"name": "update order status",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{user_access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "en",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"status\": \"shipped\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}orders/:id/status",
+									"host": [
+										"{{url}}orders"
+									],
+									"path": [
+										":id",
+										"status"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6890b5e2bdcb9f3da548423f"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get orders stats",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{user_access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}orders/admin/stats",
+									"host": [
+										"{{url}}orders"
+									],
+									"path": [
+										"admin",
+										"stats"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "(pending, confirmed, processing, shipped, delivered, cancelled)",
+											"disabled": true
+										},
+										{
+											"key": "sortBy",
+											"value": "createdAt",
+											"disabled": true
+										},
+										{
+											"key": "sortOrder",
+											"value": "(asc/desc)",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all admin orders",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{user_access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "en",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}orders/admin/all",
+									"host": [
+										"{{url}}orders"
+									],
+									"path": [
+										"admin",
+										"all"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "(pending, confirmed, processing, shipped, delivered, cancelled)",
+											"disabled": true
+										},
+										{
+											"key": "sortBy",
+											"value": "createdAt",
+											"disabled": true
+										},
+										{
+											"key": "sortOrder",
+											"value": "(asc/desc)",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "5",
+											"disabled": true
+										},
+										{
+											"key": "userId",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "users",
+					"item": [
+						{
+							"name": "add order",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{user_access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"items\": [\r\n    {\r\n      \"product\": \"68907cb2303834c16a1e4f4e\",\r\n      \"quantity\": 2\r\n    },\r\n    {\r\n      \"product\": \"6890a0ab55d7e81cd54bb1a9\",\r\n      \"quantity\": 1\r\n    }\r\n  ],\r\n  \"shippingAddress\": {\r\n    \"street\": \"123 شارع الملك فهد\",\r\n    \"city\": \"الرياض\",\r\n    \"state\": \"الرياض\",\r\n    \"zipCode\": \"12345\",\r\n    \"country\": \"السعودية\"\r\n  },\r\n  \"paymentMethod\": \"credit_card\",\r\n  \"notes\": \"يرجى التسليم خلال ساعات العمل\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}orders",
+									"host": [
+										"{{url}}orders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "cancel order",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{user_access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}orders/:id/cancel",
+									"host": [
+										"{{url}}orders"
+									],
+									"path": [
+										":id",
+										"cancel"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6890b5e2bdcb9f3da548423f"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all user orders",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{user_access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}orders?page=1&limit=5",
+									"host": [
+										"{{url}}orders"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "5"
+										},
+										{
+											"key": "status",
+											"value": "(pending, confirmed, processing, shipped, delivered, cancelled)",
+											"disabled": true
+										},
+										{
+											"key": "sortBy",
+											"value": "createdAt",
+											"disabled": true
+										},
+										{
+											"key": "sortOrder",
+											"value": "(asc/desc)",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get orders by id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{user_access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "en",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}orders/:id",
+									"host": [
+										"{{url}}orders"
+									],
+									"path": [
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6890b5e2bdcb9f3da548423f"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
